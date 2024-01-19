@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 60%;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #FFF8E3 ;
+        }
+
+        .universe{
+            width: 40vw;
+            aspect-ratio: 1;
+            background-color: #FFEAA7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            animation: sky-change 10s ease-in-out infinite;
+        }
+
+        @keyframes sky-change {
+            0%{
+                background-color: #FFEAA7;
+            }
+
+            25%{
+                background-color: #9f7a00;
+            }
+
+            50%{
+                background-color: #000000;
+            }
+
+            75%{
+                background-color: #9f7a00;
+            }
+
+            100%{
+                background-color: #FFEAA7;
+            }
+        }
+
+        .sun{
+            width: 20vw;
+            aspect-ratio: 1;
+            background-color: #FE7A36;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: inherit;
+                aspect-ratio: 1;
+                background-color: black;
+                border-radius: inherit;
+                animation: moon-move 10s ease-in-out infinite;
+            }
+        }
+
+        @keyframes moon-move {
+            0%{
+                translate: 100%;
+                scale: 1;
+            }
+
+            50%{
+                translate: 0%;
+                scale: .95;
+            }
+
+            100%{
+                translate: -100%;
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="universe">
+        <div class="sun"></div>
+    </div>
+</body>
+</html>
