@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 60%;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: #191825;
+        }
+
+        .loader{
+            width: 20rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(255, 166, 0);
+            position: relative;
+            /* z-index: 1 */
+            animation: circle-loader 2s linear infinite reverse;
+        }
+
+        @keyframes circle-loader {
+            100%{
+                rotate: 360deg;
+            }
+        }
+       
+        .loader::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 17rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #191825;
+        }
+
+        .loader::after{
+            content: "";
+            position: absolute;
+            top: -2rem;
+            left: 8rem;
+            width: 5rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: rgb(255, 166, 0);
+            box-shadow: 0 0 1rem rgb(255, 166, 0), 
+                        0 0 1.5rem rgb(255, 166, 0),
+                        0 0 2rem rgb(255, 166, 0), 
+                        0 0 2.5rem rgb(255, 166, 0),
+                        0 0 3rem rgb(255, 166, 0)
+            ;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
