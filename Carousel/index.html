@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 60%;
+        }
+
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .container-img{
+            width: 60vw;
+            height: 50rem;
+            /* background-color: aquamarine; */
+            border-radius: 1rem;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            background-image: url("https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            background-size: cover;
+            animation: carousel 15s linear infinite;
+        }
+
+        @keyframes carousel {
+            0%{
+                background-image: url("https://images.pexels.com/photos/101667/pexels-photo-101667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+
+            20%{
+                background-image: url("https://images.pexels.com/photos/1186841/pexels-photo-1186841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+
+            40%{
+                background-image: url("https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+
+            60%{
+                background-image: url("https://images.pexels.com/photos/344060/pexels-photo-344060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+
+            80%{
+                background-image: url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+
+            100%{
+                background-image: url("https://images.pexels.com/photos/1054222/pexels-photo-1054222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-img"></div>
+</body>
+</html>
